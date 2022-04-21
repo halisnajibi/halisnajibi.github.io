@@ -1,0 +1,358 @@
+:root {
+    --maincolor: #252734;
+    --secondarycolor: #333646;
+    --coloraksen: #ff9100;
+}
+
+body {
+    background-color: var(--maincolor);
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+
+
+
+/* hero */
+.nav-link.active {
+    color: var(--coloraksen) !important;
+}
+
+.hs {
+    font-family: 'Pacifico', cursive !important;
+    font-size: 22px;
+}
+
+.nav-link {
+    display: inline-block;
+    margin-block: 2px;
+    color: white !important;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--coloraksen) !important;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.container.intro {
+    margin-top: 100px;
+    color: white;
+}
+
+.container.intro span {
+    color: var(--coloraksen);
+}
+
+.container.intro img {
+    width: 95%;
+}
+
+p.satu {
+    font-family: 'Poppins', sans-serif;
+    font-size: 52px;
+    font-weight: semi-bold;
+}
+
+p.dua {
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 21px;
+    line-height: 35px;
+}
+
+.container.intro h1 {
+    font-family: 'Pacifico', cursive !important;
+    font-size: 42px;
+    letter-spacing: 3px;
+}
+
+.btn-1 {
+    outline: 2px solid white;
+    padding: 20px;
+    margin-top: 200px;
+    position: relative;
+    overflow: hidden;
+    transition: color 1s;
+    width: 300px;
+}
+
+.btn-1 a {
+    text-decoration: none;
+    color: white;
+    margin-left: 70px;
+}
+
+.btn-1 a:hover {
+    color: var(--secondarycolor);
+}
+
+.btn-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background-color: var(--coloraksen);
+    transform: skewX(35deg);
+    transition: width 1s;
+    ;
+    z-index: -1;
+
+}
+
+.btn-1:hover::before {
+    width: 140%;
+}
+
+/* akhir hero */
+
+
+/* about */
+#about {
+    background-color: var(--secondarycolor);
+}
+
+#about h3 {
+    text-align: center;
+    color: var(--coloraksen);
+    font-size: 35px;
+    font-family: 'Pacifico',
+        cursive !important;
+    margin-bottom: 50px;
+}
+
+#about h6 {
+    font-size: 24px;
+    color: white;
+    font-weight: 500;
+}
+
+#about p {
+    font-size: 21px;
+    color: white;
+    font-weight: 300;
+}
+
+/* akhir about */
+
+/* project */
+#project {
+    background-color: var(--maincolor);
+}
+
+#project h3 {
+    text-align: center;
+    color: var(--coloraksen);
+    font-size: 35px;
+    font-family: 'Pacifico',
+        cursive !important;
+    margin-bottom: 50px;
+}
+
+img.tinggi {
+    height: 150px;
+}
+
+p.bahasa {
+    font-size: 15px;
+
+}
+
+/* akhir project */
+
+
+/* skill */
+#skill {
+    background-color: var(--secondarycolor);
+}
+
+#skill h3 {
+    text-align: center;
+    color: var(--coloraksen);
+    font-size: 35px;
+    font-family: 'Pacifico',
+        cursive !important;
+    margin-bottom: 50px;
+}
+
+#skill img {
+    width: 70px;
+    margin-left: 80px;
+    padding-bottom: 10px;
+}
+
+/* akhir skill */
+
+/* contact */
+#contact h3 {
+    text-align: center;
+    color: var(--coloraksen);
+    font-size: 35px;
+    font-family: 'Pacifico',
+        cursive !important;
+    margin-bottom: 50px;
+}
+
+#contact img {
+    width: 40px;
+}
+
+#contact a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: white;
+}
+
+/* akhir contact */
+
+footer {
+    color: white;
+    margin-top: 100px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+/* mobile */
+@media screen and (max-width:570px) {
+
+    p.satu {
+        font-family: 'Poppins', sans-serif;
+        font-size: 21px;
+        font-weight: semi-bold;
+
+    }
+
+    p.dua {
+        margin-top: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 21px;
+        line-height: 35px;
+    }
+
+    .container.intro h1 {
+        font-family: 'Pacifico', cursive !important;
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+
+    .container.intro {
+        margin-top: 25px;
+    }
+
+    .navbar-toggler {
+        width: 47px;
+        height: 34px;
+        background-color: var(--maincolor);
+        border: none;
+    }
+
+    .navbar-toggler .navbar-toggler-icon {
+        width: 100%;
+        float: left;
+        height: 2px;
+        margin-bottom: 5px;
+        background-color: var(--coloraksen);
+    }
+
+    .btn-1 {
+        outline: 2px solid white;
+
+        margin-top: 200px;
+        position: relative;
+        overflow: hidden;
+        transition: color 1s;
+        width: 150px;
+    }
+
+    .btn-1 a {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        margin-left: -10px;
+    }
+
+    .btn-1 a:hover {
+        color: var(--secondarycolor);
+    }
+
+    .btn-1::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -50px;
+        width: 0;
+        height: 100%;
+        background-color: var(--coloraksen);
+        transform: skewX(35deg);
+        transition: width 1s;
+        z-index: -1;
+
+    }
+
+    .btn-1:hover::before {
+        width: 150%;
+    }
+
+    #about h6 {
+        font-size: 24px;
+    }
+
+    #about p {
+        font-size: 18px;
+    }
+
+    #about .kedua {
+        margin-top: 10px;
+    }
+
+    #project .card {
+        margin-bottom: 10px;
+    }
+
+    #skill .card {
+        margin-bottom: 10px;
+    }
+
+    #contact img {
+        width: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+/* akhr mobile */
+
+/* tablet */
+@media screen and (max-width:850px) {
+    .navbar-toggler {
+        width: 47px;
+        height: 34px;
+        background-color: var(--maincolor);
+        border: none;
+    }
+
+    .navbar-toggler .navbar-toggler-icon {
+        width: 100%;
+        float: left;
+        height: 2px;
+        margin-bottom: 5px;
+        background-color: var(--coloraksen);
+    }
+}
